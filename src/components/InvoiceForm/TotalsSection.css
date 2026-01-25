@@ -1,0 +1,82 @@
+.totals-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+    padding-right: 2rem;
+}
+
+.total-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+    width: 100%;
+}
+
+.total-row label {
+    color: #374151;
+    font-weight: 500;
+    margin: 0;
+    text-align: right;
+    min-width: 80px;
+}
+
+.amount-value {
+    font-weight: 600;
+    min-width: 80px;
+    text-align: right;
+    color: #111827;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    background: white;
+    width: 100px;
+}
+
+.input-group input {
+    width: 100%;
+    border: none;
+    border-radius: 6px;
+    padding: 0.375rem 0.5rem;
+    text-align: right;
+}
+
+.input-group input:focus {
+    box-shadow: none;
+}
+
+.input-group .unit {
+    padding: 0 0.5rem;
+    font-size: 0.8rem;
+    color: #6b7280;
+    border-left: 1px solid #e5e7eb;
+}
+
+.final-total {
+    margin-top: 0.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+.final-total label {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.amount-value.total-blue {
+    color: #2563eb;
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .totals-container {
+        padding-right: 0;
+    }
+}

@@ -1,0 +1,121 @@
+/* App Container - Full Width layout matching DueClear */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-primary);
+}
+
+.app-body {
+  flex: 1;
+  display: flex;
+  position: relative;
+  /* Remove center alignment on parent to allow better control */
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  /* Align start to allow left positioning */
+  padding: 2rem 2rem 2rem 5%;
+  /* Use percentage padding to start "more left" but not edge */
+  gap: 2rem;
+  /* Gap between form and sidebar */
+}
+
+/* Container wraps both Form and Sidebar now */
+.content-wrapper {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1600px;
+  /* Wider max-width */
+  margin: 0 auto;
+  /* Center alignment */
+  align-items: flex-start;
+}
+
+.form-container {
+  flex: 1;
+  /* Take remaining space */
+  max-width: none;
+  /* Let it grow */
+  min-width: 0;
+}
+
+/* Sidebar now inside main flow */
+.sidebar-container {
+  width: 350px;
+  min-width: 350px;
+  flex-shrink: 0;
+}
+
+/* Action Buttons - Adjust to match form width */
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding: 1.25rem;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  position: sticky;
+  bottom: 0;
+  /* Stick to bottom of viewport */
+  box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1);
+  z-index: 50;
+}
+
+.action-buttons-right {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.btn-lg {
+  padding: 0.875rem 1.5rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
+
+  .main-content {
+    padding: 1rem;
+  }
+
+  .sidebar-container {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+.items-table-wrapper {
+  overflow-x: auto;
+  margin: 0 -0.5rem;
+  padding: 0 0.5rem;
+}

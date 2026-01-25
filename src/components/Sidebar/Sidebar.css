@@ -1,0 +1,154 @@
+.sidebar {
+    width: 100%;
+    /* Now takes full width of its container */
+    background: white;
+    /* Changed to white to match screenshot/description usually */
+    padding: 0;
+    /* Removing internal padding of container for cleaner fit */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: all 0.3s ease;
+    /* Removed fixed position sticky, allowing it to flow in grid but sticky inside its column */
+}
+
+/* Make sticky behavior work inside the column */
+.sidebar-sticky-wrapper {
+    position: sticky;
+    top: 90px;
+}
+
+.sidebar-scroll-content {
+    /* overflow-y: auto; */
+    /* height: 100%; */
+}
+
+.sidebar.collapsed {
+    display: none;
+    /* Hide completely on desktop layout if collapsed (or handle differently) */
+}
+
+/* Hide toggle on desktop as it's part of layout now */
+.sidebar-toggle {
+    display: none;
+}
+
+.sidebar-section {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 1.25rem;
+    margin-bottom: 2rem;
+    border: 1px solid #e5e7eb;
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.sidebar-header h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #111827;
+}
+
+.text-blue {
+    color: #2563eb;
+}
+
+.text-red {
+    color: #dc2626;
+}
+
+/* Empty State */
+.sidebar-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 0;
+    color: #9ca3af;
+}
+
+.sidebar-empty svg {
+    margin-bottom: 1rem;
+    opacity: 0.4;
+}
+
+.sidebar-empty p {
+    font-weight: 600;
+    color: #4b5563;
+    margin-bottom: 0.25rem;
+}
+
+.sidebar-empty span {
+    font-size: 0.8rem;
+}
+
+/* Invoice List */
+.invoice-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.invoice-item {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    padding: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.invoice-item:hover {
+    border-color: #2563eb;
+    background: #eff6ff;
+}
+
+.invoice-item-content {
+    margin-bottom: 0.5rem;
+}
+
+.invoice-item-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.25rem;
+}
+
+.invoice-item-number {
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: #1f2937;
+}
+
+.invoice-item-amount {
+    font-weight: 600;
+    color: #2563eb;
+    font-size: 0.875rem;
+}
+
+.invoice-item-details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+.invoice-item-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+@media (max-width: 1024px) {
+    .sidebar-toggle {
+        display: flex;
+    }
+}

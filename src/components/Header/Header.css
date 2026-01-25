@@ -1,0 +1,122 @@
+.header {
+    background: var(--bg-primary);
+    /* White/Dark background matching body */
+    /* Remove border-bottom or make it very subtle if needed, screenshot looks clean */
+    /* border-bottom: 1px solid var(--border-color); */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow-sm);
+    /* Use variable */
+}
+
+.header-container {
+    width: 100%;
+    max-width: 1600px;
+    /* Match content wrapper max-width */
+    margin: 0 auto;
+    /* Center like footer */
+    padding: 1rem 2rem 1rem 5%;
+    /* Match main content padding */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+.logo-icon-wrapper {
+    color: var(--text-primary);
+    /* Or specific brand color if needed, but text-primary for dark mode support */
+    /* Green color match */
+    display: flex;
+    align-items: center;
+}
+
+.logo-text-group {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.logo-text-main {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    /* Use variable */
+}
+
+.logo-text-sub {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+    /* Use variable */
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-link {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    /* Use variable */
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--accent-primary);
+    /* Use variable for hover/active */
+}
+
+/* Theme Toggle - subtle styling */
+.theme-toggle-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    /* Use variable */
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.2s;
+}
+
+.theme-toggle-btn:hover {
+    background: var(--bg-tertiary);
+    /* Use variable */
+    color: var(--text-primary);
+    /* Use variable */
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        padding: 1rem;
+    }
+
+    .header-nav {
+        gap: 1rem;
+    }
+
+    .nav-link {
+        display: none;
+        /* Hide links on mobile, keep generic/hamburger if needed but sticking to req */
+    }
+
+    /* Keep home visible or just toggle */
+    .nav-link.active {
+        display: block;
+    }
+}
