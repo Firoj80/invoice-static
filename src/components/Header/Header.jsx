@@ -24,6 +24,8 @@ const Header = () => {
                     <Link to="/" className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}>Home</Link>
                     <Link to="/invoicing-guide" className={`nav-link ${location.pathname === '/invoicing-guide' ? 'active' : ''}`}>Invoicing Guide</Link>
                     <Link to="/help-center" className={`nav-link ${location.pathname === '/help-center' ? 'active' : ''}`}>Help</Link>
+                    <a href="https://apps.clearbillai.com/features" className="nav-link">Go Pro</a>
+                    <a href="https://apps.clearbillai.com/auth?mode=login" className="btn-primary btn-sm" style={{ textDecoration: 'none' }}>Login</a>
                 </nav>
             </div >
         </header >
