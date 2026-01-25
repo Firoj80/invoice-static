@@ -1,10 +1,30 @@
 /* Main Form Container */
 .invoice-form-container {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    background-color: var(--card);
+    /* Fallback */
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+    /* Fallback */
     padding: 2rem;
-    border: 1px solid #e5e7eb;
+    height: 100%;
+
+    /* Apply Glass Effect */
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="dark"] .invoice-form-container {
+    background: rgba(30, 41, 59, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.form-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .form-header h2 {

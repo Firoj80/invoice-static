@@ -11,7 +11,7 @@ const SEOContent = () => {
                         <h2>Why Choose ClearBillAI?</h2>
                         <p>
                             ClearBillAI provides a completely <strong>free invoice generator</strong> that helps freelancers, small businesses,
-                            and entrepreneurs create professional-looking invoices in minutes. No hidden fees, no
+                            and entrepreneurs create professional-looking invoices in minutes. Whether you need a <strong>bill generator</strong> for clients or a <strong>receipt maker</strong> for completed payments, ClearBillAI handles it all. No hidden fees, no
                             subscriptions, and no limitations on the number of invoices you can create.
                         </p>
 
