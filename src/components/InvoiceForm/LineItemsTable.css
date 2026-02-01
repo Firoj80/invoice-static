@@ -109,19 +109,60 @@
     }
 
     .item-row {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         gap: 0.75rem;
         border: 1px solid #e5e7eb;
         padding: 1rem;
+        position: relative;
     }
 
     .input-desc {
         grid-column: 1 / -1;
     }
 
+    /* Add labels for inputs on mobile since header is hidden */
+    .input-qty::before,
+    .input-rate::before,
+    .input-disc-group::before {
+        display: block;
+        font-size: 0.75rem;
+        color: #6b7280;
+        margin-bottom: 0.25rem;
+    }
+
+    /* Since we can't easily add pseudo-elements to inputs, we rely on the placeholder
+       OR we can wrap them in the JSX if we really want labels. 
+       However, grid layout change is safer without changing JSX structure too much.
+       Let's try a grid layout that makes it obvious.
+    */
+
+    .item-row {
+        grid-template-columns: 1fr 1fr;
+        /* Qty | Rate */
+    }
+
+    .input-desc {
+        grid-column: 1 / -1;
+        margin-bottom: 0.5rem;
+    }
+
+    .input-disc-group {
+        grid-column: 1 / 2;
+    }
+
     .amount-display {
-        text-align: left;
+        grid-column: 2 / 3;
+        text-align: right;
         font-size: 1.1rem;
-        margin-top: 0.5rem;
+        align-self: center;
+    }
+
+    .delete-item-btn {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        background: #fee2e2;
+        color: #ef4444;
+        opacity: 1;
     }
 }
