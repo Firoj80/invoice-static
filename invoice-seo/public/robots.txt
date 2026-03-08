@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Block app/auth pages (not relevant to search)
+Disallow: /dashboard/
+Disallow: /account/
+Disallow: /auth/
+Disallow: /login/
+
+# Sitemap location
+Sitemap: https://www.clearbillai.com/sitemap.xml

@@ -1,0 +1,84 @@
+/* Layout for content to appear side-by-side */
+.static-page-content-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+/* We need to assume the sections are direct children of .static-page-content based on previous component structure,
+   but actually they are just elements inside.
+   Let's target the container to be a grid. */
+.static-page-content {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    /* Center alignment */
+    padding: 4rem 2rem 4rem 5%;
+    flex: 1;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Side by side */
+    gap: 3rem;
+    align-content: start;
+}
+
+/* Make the Title and Intro span full width */
+.static-page-content h1,
+.static-page-content>p:first-of-type {
+    grid-column: 1 / -1;
+    max-width: 800px;
+    /* Keep intro text readable width */
+}
+
+/* Sections should fit in columns */
+.static-page-content section {
+    margin-bottom: 0;
+    /* Gap handles spacing */
+    background: var(--card);
+    /* Use variable */
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    /* Use variable */
+    height: 100%;
+}
+
+.static-page-content h2 {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    /* Use variable */
+    margin-top: 0;
+    /* Remove top margin since card has padding */
+    margin-bottom: 1rem;
+}
+
+.static-page-content h3 {
+    font-size: 1.25rem;
+    color: var(--text-primary);
+    /* Use variable */
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.static-page-content p {
+    color: var(--text-secondary);
+    /* Use variable */
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.static-page-content ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    color: var(--text-secondary);
+    /* Use variable */
+    line-height: 1.7;
+}
+
+@media (max-width: 1024px) {
+    .static-page-content {
+        grid-template-columns: 1fr;
+        padding: 2rem 1rem;
+        gap: 1.5rem;
+    }
+}
