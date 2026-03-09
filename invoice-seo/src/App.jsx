@@ -8,7 +8,7 @@ import HelpCenter from './pages/HelpCenter';
 import TermsOfService from './pages/TermsOfService';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import ContactUs from './pages/ContactUs';
-import FreeInvoiceGeneratorGuide from './pages/blog/FreeInvoiceGeneratorGuide';
+import InvoiceGeneratorToolGuide from './pages/blog/InvoiceGeneratorToolGuide';
 import './pages/Pages.css';
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
           <Route path="/terms" element={<TermsOfService />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/contact" element={<ContactUs />} />
-          <Route path="/blog/free-invoice-generator-guide" element={<FreeInvoiceGeneratorGuide />} />
+          <Route path="/blog/free-invoice-generator-tool" element={<InvoiceGeneratorToolGuide />} />
         </Routes>
         <Footer />
       </div>
