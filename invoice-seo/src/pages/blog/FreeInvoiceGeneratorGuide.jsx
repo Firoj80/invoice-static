@@ -6,7 +6,7 @@ import './Blog.css';
 const FreeInvoiceGeneratorGuide = () => {
     useSEO({
         title: 'Free Invoice Generator: The Complete 2025 Guide for Freelancers & Small Businesses — ClearBill AI',
-        description: 'Everything you need to know about free invoice generators in 2025. Discover the best tools, key features, invoicing tips, and how ClearBill AI helps freelancers and small businesses get paid faster.',
+        description: 'Everything you need to know about free invoice generators in 2026. Discover the best tools, key features, invoicing tips, and how ClearBill AI helps freelancers and small businesses get paid faster.',
         canonical: 'https://www.clearbillai.com/blog/free-invoice-generator-guide',
         ogTitle: 'Free Invoice Generator: The Complete 2025 Guide',
         ogDesc: 'Discover how free invoice generators work, what features to look for, common invoicing mistakes, and how to get paid faster with ClearBill AI.',
@@ -110,7 +110,7 @@ const FreeInvoiceGeneratorGuide = () => {
                 <h2>2. Why Invoicing Tools Matter More Than Ever in 2025</h2>
                 <p>
                     The freelance economy is bigger than ever. In 2025, an estimated <strong>73 million Americans
-                    freelance</strong> in some capacity, contributing over $1.3 trillion to the US economy.
+                        freelance</strong> in some capacity, contributing over $1.3 trillion to the US economy.
                     Globally, the number is even higher. With more people working independently — as designers,
                     developers, writers, consultants, coaches, and service providers — professional invoicing
                     has become a core business skill, not an optional nicety.

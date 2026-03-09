@@ -13,7 +13,7 @@ const InvoiceGeneratorToolGuide = () => {
     });
 
     return (
-        <article className="blog-post static-page-content" itemScope itemType="https://schema.org/BlogPosting">
+        <article className="blog-post" itemScope itemType="https://schema.org/BlogPosting">
             {/* Schema metadata */}
             <meta itemProp="datePublished" content="2025-03-09" />
             <meta itemProp="dateModified" content="2025-03-09" />
