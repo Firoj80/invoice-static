@@ -36,7 +36,7 @@ const InvoiceGeneratorToolGuide = () => {
                     <span className="blog-tag">Business Tips</span>
                 </div>
                 <h1 itemProp="headline">
-                    Free Invoice Generator Tool: Create Professional Invoices Online in 2025
+                    Free Invoice Generator Tool: Create Professional Invoices Online in 2026
                 </h1>
                 <p className="blog-lead">
                     Whether you&apos;re a freelance designer billing your first client or a growing agency

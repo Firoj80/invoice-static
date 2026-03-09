@@ -212,6 +212,15 @@ const Home = () => {
             {/* ✅ SEO crawlable content section */}
             <SEOContent />
 
+            {/* Hidden component for persistent PDF generation without modal */}
+            <div style={{ position: 'absolute', left: '-9999px', top: '-9999px', width: '100%' }}>
+                <InvoicePreview
+                    id="invoice-preview"
+                    invoiceData={invoiceData}
+                    currencySymbol={currencySymbol}
+                />
+            </div>
+
             {/* Preview Modal */}
             <PreviewModal
                 isOpen={isPreviewOpen}
@@ -220,6 +229,7 @@ const Home = () => {
                 isGenerating={isGenerating}
             >
                 <InvoicePreview
+                    id="invoice-modal-preview"
                     invoiceData={invoiceData}
                     currencySymbol={currencySymbol}
                 />

@@ -2,7 +2,7 @@ import { useMemo } from 'react';
 import { formatDate } from '../../utils/helpers';
 import './InvoicePreview.css';
 
-const InvoicePreview = ({ invoiceData, currencySymbol }) => {
+const InvoicePreview = ({ id = 'invoice-preview', invoiceData, currencySymbol }) => {
     const {
         businessLogo, businessDetails,
         clientDetails,
@@ -71,7 +71,7 @@ const InvoicePreview = ({ invoiceData, currencySymbol }) => {
     }
 
     return (
-        <div id="invoice-preview" className="invoice-document">
+        <div id={id} className="invoice-document">
             {/* Header */}
             <div className="invoice-header">
                 <div className="invoice-branding">
