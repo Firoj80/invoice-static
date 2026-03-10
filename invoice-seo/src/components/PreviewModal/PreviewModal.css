@@ -86,16 +86,29 @@
     }
 
     .modal-container {
-        max-height: 100vh;
+        max-height: 100dvh;
         height: 100%;
         border-radius: 0;
     }
 
     .modal-header {
-        padding: 0.875rem 1rem;
+        padding: 0.75rem 1rem;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .modal-header h3 {
+        font-size: 1rem;
+        white-space: nowrap;
+    }
+
+    .modal-actions {
+        gap: 0.5rem;
     }
 
     .modal-content {
-        padding: 1rem;
+        padding: 0.5rem 0;
+        overflow-x: hidden;
+        overflow-y: auto;
     }
 }

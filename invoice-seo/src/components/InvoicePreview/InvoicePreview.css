@@ -316,10 +316,28 @@
 }
 
 /* Responsive constraints just for the web preview */
-@media (max-width: 768px) {
+@media (max-width: 860px) {
+    /*
+     * The invoice document must stay at 794px (A4 width) for pixel-perfect PDF
+     * export. We use transform: scale() to visually shrink it on small screens.
+     * The wrapper compensates for the height collapse caused by scaling.
+     */
+    .invoice-preview-scaler {
+        /* Width of the scaled document so the modal knows how wide to be */
+        width: 100%;
+        overflow-x: hidden;
+        display: flex;
+        justify-content: center;
+    }
+
     .invoice-document {
-        padding: 1.5rem;
-        min-width: auto;
+        /* Scale down proportionally to fit the viewport.
+           794px is A4; calc ensures the scale factor = viewport/794 */
+        transform-origin: top center;
+        /* Will be set dynamically by JS; fallback for ~390px screens ≈ 0.49 */
+        transform: scale(var(--invoice-scale, 0.49));
+        /* Prevent layout from collapsing — the parent wrapper handles height */
+        flex-shrink: 0;
     }
 
     .invoice-parties,
