@@ -35,6 +35,7 @@ const TotalsSection = ({ invoiceData, updateField, currencySymbol }) => {
                         max="100"
                         value={discountPercent}
                         onChange={(e) => updateField('discountPercent', parseFloat(e.target.value) || 0)}
+                        aria-label="Overall Discount Percent"
                     />
                     <span className="unit">%</span>
                 </div>
@@ -49,6 +50,7 @@ const TotalsSection = ({ invoiceData, updateField, currencySymbol }) => {
                         max="100"
                         value={taxPercent}
                         onChange={(e) => updateField('taxPercent', parseFloat(e.target.value) || 0)}
+                        aria-label="Tax Percent"
                     />
                     <span className="unit">%</span>
                 </div>
@@ -63,6 +65,7 @@ const TotalsSection = ({ invoiceData, updateField, currencySymbol }) => {
                         step="0.01"
                         value={shipping}
                         onChange={(e) => updateField('shipping', parseFloat(e.target.value) || 0)}
+                        aria-label="Shipping Cost"
                     />
                 </div>
             </div>

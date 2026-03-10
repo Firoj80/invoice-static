@@ -68,6 +68,7 @@ const Sidebar = ({ invoices, onSelect, onDelete, onDownload, isCollapsed, toggle
                                                     onDownload(invoice);
                                                 }}
                                                 title="Download PDF"
+                                                aria-label={`Download PDF for invoice ${invoice.invoiceNumber}`}
                                             >
                                                 <Download size={16} />
                                             </button>
@@ -78,6 +79,7 @@ const Sidebar = ({ invoices, onSelect, onDelete, onDownload, isCollapsed, toggle
                                                     onDelete(invoice.id);
                                                 }}
                                                 title="Delete"
+                                                aria-label={`Delete invoice ${invoice.invoiceNumber}`}
                                             >
                                                 <Trash2 size={16} />
                                             </button>

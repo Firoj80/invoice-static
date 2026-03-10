@@ -16,11 +16,13 @@ const InvoicePreview = ({ id = 'invoice-preview', invoiceData, currencySymbol })
             if (!scaler || !doc) return;
 
             if (window.innerWidth < 860) {
-                const availableWidth = scaler.parentElement?.clientWidth || window.innerWidth;
-                const scale = Math.min(1, availableWidth / INVOICE_WIDTH);
+                // Use a slight delay or check multiple width sources to handle modal animation timing
+                const getWidth = () => scaler.parentElement?.getBoundingClientRect().width || window.innerWidth;
+                const availableWidth = getWidth();
+
+                const scale = Math.min(1, (availableWidth - 20) / INVOICE_WIDTH);
                 const scaledHeight = doc.scrollHeight * scale;
                 scaler.style.setProperty('--invoice-scale', scale);
-                // Collapse the scroll-height gap created by scaling
                 scaler.style.height = `${scaledHeight}px`;
             } else {
                 scaler.style.removeProperty('--invoice-scale');

@@ -7,9 +7,10 @@ const InvoiceMeta = ({ data, updateField }) => {
                     <input
                         id="invoiceNumber"
                         type="text"
-                        placeholder="INV-001"
+                        placeholder="Invoice #"
                         value={data.invoiceNumber}
                         onChange={(e) => updateField('invoiceNumber', e.target.value)}
+                        aria-label="Invoice Number"
                     />
                 </div>
                 <div className="form-group">
@@ -19,6 +20,7 @@ const InvoiceMeta = ({ data, updateField }) => {
                         type="date"
                         value={data.invoiceDate}
                         onChange={(e) => updateField('invoiceDate', e.target.value)}
+                        aria-label="Issue Date"
                     />
                 </div>
                 <div className="form-group">
@@ -28,6 +30,7 @@ const InvoiceMeta = ({ data, updateField }) => {
                         type="date"
                         value={data.dueDate}
                         onChange={(e) => updateField('dueDate', e.target.value)}
+                        aria-label="Due Date"
                     />
                 </div>
             </div>

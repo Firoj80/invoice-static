@@ -37,7 +37,7 @@
 .logo-icon-wrapper {
     display: flex;
     align-items: center;
-    color: var(--accent-primary, #2563eb);
+    color: #1e40af;
 }
 .logo-text-group {
     display: flex;
@@ -55,7 +55,7 @@
 .logo-text-sub {
     font-size: 1.15rem;
     font-weight: 400;
-    color: var(--accent-primary, #2563eb);
+    color: #1e40af;
 }
 
 /* ---- Desktop Nav ---- */
@@ -295,9 +295,9 @@
     color: var(--accent-primary, #2563eb);
 }
 .drawer-link-pro {
-    color: var(--accent-primary, #2563eb);
-    font-weight: 600;
-    background: rgba(37, 99, 235, 0.05);
+    color: #1e40af;
+    font-weight: 700;
+    background: rgba(30, 64, 175, 0.05);
 }
 .drawer-link-pro:hover {
     background: rgba(37, 99, 235, 0.12);
@@ -328,8 +328,8 @@
     border-radius: 12px;
     margin-bottom: 0.75rem;
     /* Gradient upgrade */
-    background: linear-gradient(135deg, var(--accent-primary, #2563eb), #7c3aed) !important;
-    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+    background: linear-gradient(135deg, #1e40af, #6d28d9) !important;
+    box-shadow: 0 4px 14px rgba(30, 64, 175, 0.3);
     transition: transform 0.2s, box-shadow 0.2s;
 }
 .drawer-cta-btn:hover {

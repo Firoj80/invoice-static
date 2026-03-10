@@ -317,6 +317,7 @@
 
 /* Responsive constraints just for the web preview */
 @media (max-width: 860px) {
+
     /*
      * The invoice document must stay at 794px (A4 width) for pixel-perfect PDF
      * export. We use transform: scale() to visually shrink it on small screens.
@@ -328,6 +329,7 @@
         overflow-x: hidden;
         display: flex;
         justify-content: center;
+        transform-origin: top center;
     }
 
     .invoice-document {

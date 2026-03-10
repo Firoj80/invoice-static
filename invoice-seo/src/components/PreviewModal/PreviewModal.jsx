@@ -45,7 +45,10 @@ const PreviewModal = ({ isOpen, onClose, children, onDownload, isGenerating }) =
                                 </>
                             )}
                         </button>
-                        <button className="btn-ghost btn-icon" onClick={onClose} aria-label="Close">
+                        <button className="btn-ghost btn-icon" onClick={(e) => {
+                            e.stopPropagation();
+                            onClose();
+                        }} aria-label="Close Preview">
                             <X size={24} />
                         </button>
                     </div>

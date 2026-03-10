@@ -50,6 +50,7 @@ const LineItemsTable = ({ items, setItems, currencySymbol }) => {
                             min="1"
                             value={item.quantity}
                             onChange={(e) => updateItem(index, 'quantity', parseFloat(e.target.value) || 0)}
+                            aria-label="Item Quantity"
                         />
                         <input
                             type="number"
@@ -58,6 +59,7 @@ const LineItemsTable = ({ items, setItems, currencySymbol }) => {
                             step="0.01"
                             value={item.rate}
                             onChange={(e) => updateItem(index, 'rate', parseFloat(e.target.value) || 0)}
+                            aria-label="Item Rate"
                         />
                         <div className="input-disc-group">
                             <input
@@ -66,6 +68,7 @@ const LineItemsTable = ({ items, setItems, currencySymbol }) => {
                                 max="100"
                                 value={item.discount}
                                 onChange={(e) => updateItem(index, 'discount', parseFloat(e.target.value) || 0)}
+                                aria-label="Item Discount Percent"
                             />
                             <span className="unit">%</span>
                         </div>
