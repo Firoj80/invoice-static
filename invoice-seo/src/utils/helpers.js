@@ -1,4 +1,4 @@
-import html2pdf from 'html2pdf.js';
+// html2pdf is dynamically imported inside generatePDF — only loaded when user exports
 
 export const generatePDF = async (elementId, filename = 'invoice') => {
     const element = document.getElementById(elementId);
@@ -45,6 +45,8 @@ export const generatePDF = async (elementId, filename = 'invoice') => {
     }
 
     try {
+        // Dynamically import html2pdf.js — only downloaded the first time the user exports
+        const { default: html2pdf } = await import('html2pdf.js');
         await html2pdf().set(opt).from(element).save();
         return true;
     } catch (error) {
